@@ -1687,13 +1687,14 @@
     <script src="js/agency.min.js"></script>
 	
  <!-- Show modals -->
-	$(document).ready(function() {
-
-  if(window.location.href.indexOf('#portfolioModal1') != -1) {
-    $('#portfolioModal1').modal('show');
-
+$(document).ready(function () {
+    $('.modal').each(function () {
+        const modalId = `#${$(this).attr('id')}`;
+        if (window.location.href.indexOf(modalId) !== -1) {
+            $(modalId).modal('show');
+        }
+    });
 });
-
   </body>
 
 </html>
