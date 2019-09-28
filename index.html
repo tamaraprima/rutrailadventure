@@ -78,16 +78,6 @@
 
   <body id="page-top">
   
-     <!-- Show modals -->
-$(document).ready(function () {
-    $('.modal').each(function () {
-        const modalId = `#${$(this).attr('id')}`;
-        if (window.location.href.indexOf(modalId) !== -1) {
-            $(modalId).modal('show');
-        }
-    });
-});
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -1696,6 +1686,16 @@ $(document).ready(function () {
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 	
+	 <script>
+	$(document).ready(function () {
+    $('.modal').each(function () {
+        const modalId = `#${$(this).attr('id')}`;
+        if (window.location.href.indexOf(modalId) !== -1) {
+            $(modalId).modal('show');
+        }
+    });
+});
+	</script>
 
   </body>
 
