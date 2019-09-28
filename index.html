@@ -3,6 +3,16 @@
 
   <head>
   
+   <!-- Show modals -->
+$(document).ready(function () {
+    $('.modal').each(function () {
+        const modalId = `#${$(this).attr('id')}`;
+        if (window.location.href.indexOf(modalId) !== -1) {
+            $(modalId).modal('show');
+        }
+    });
+});
+  
   <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -1686,15 +1696,7 @@
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 	
- <!-- Show modals -->
-$(document).ready(function () {
-    $('.modal').each(function () {
-        const modalId = `#${$(this).attr('id')}`;
-        if (window.location.href.indexOf(modalId) !== -1) {
-            $(modalId).modal('show');
-        }
-    });
-});
+
   </body>
 
 </html>
