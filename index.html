@@ -3,16 +3,6 @@
 
   <head>
   
-   <!-- Show modals -->
-$(document).ready(function () {
-    $('.modal').each(function () {
-        const modalId = `#${$(this).attr('id')}`;
-        if (window.location.href.indexOf(modalId) !== -1) {
-            $(modalId).modal('show');
-        }
-    });
-});
-  
   <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -87,6 +77,16 @@ $(document).ready(function () {
   </head>
 
   <body id="page-top">
+  
+     <!-- Show modals -->
+$(document).ready(function () {
+    $('.modal').each(function () {
+        const modalId = `#${$(this).attr('id')}`;
+        if (window.location.href.indexOf(modalId) !== -1) {
+            $(modalId).modal('show');
+        }
+    });
+});
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
